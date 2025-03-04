@@ -9,4 +9,5 @@ urlpatterns = [
     path("", views.index, name="index"),
     # ex: /political_parties/5/
     path("<int:question_id>/", views.detail, name="detail"),
+    path('sign_up', views.sign_up, name = 'sign_up')
 ]

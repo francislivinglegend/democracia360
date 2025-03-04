@@ -24,4 +24,5 @@ urlpatterns = [
     path("political_parties/", include("political_parties.urls", namespace="political_parties")),
     path("", views.home, name="home"),
     path("admin/", admin.site.urls),
+    path("accounts/", include("django.contrib.auth.urls")),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
