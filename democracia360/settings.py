@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "political_parties.apps.PoliticalPartiesConfig",
+    "artificial_intelligence.apps.ArtificialIntelligenceConfig",
 ]
 
 MIDDLEWARE = [
@@ -125,8 +126,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
-STATIC_ROOT = 'static'
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR / "static"]  # If you store static files in a "static" folder
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

@@ -1,0 +1,31 @@
+{% extends "base_generic.html" %}
+
+{% block title %}Artificial Intelligence{% endblock %}
+
+{% block content %}
+
+<div class="container mt-4">
+    {% if query %}
+        <div class="alert alert-info">
+            <strong>Query:</strong> {{ query }}
+        </div>
+    {% endif %}
+
+    {% if response %}
+        <div class="alert alert-success mt-3">
+            <strong>Query Result:</strong> {{ response }}
+        </div>
+    {% endif %}
+
+    <div class="mt-4">
+        <form action="/artificial_intelligence/" method="post" class="card p-4 shadow-sm">
+            {% csrf_token %}
+            <div class="mb-3">
+                {{ form.as_p }}
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

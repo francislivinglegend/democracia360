@@ -22,6 +22,7 @@ from . import views
 
 urlpatterns = [
     path("political_parties/", include("political_parties.urls", namespace="political_parties")),
+    path("artificial_intelligence/", include("artificial_intelligence.urls", namespace="artificial_intelligence")),
     path("", views.home, name="home"),
     path("admin/", admin.site.urls),
     path("accounts/", include("django.contrib.auth.urls")),
